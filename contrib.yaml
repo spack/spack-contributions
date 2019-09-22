@@ -1,0 +1,31 @@
+#
+# Contribution plot configuraion file
+#
+contrib:
+  # Repository root
+  repo:   ./spack
+
+  # organization mapping
+  orgmap: ./author-to-org.json
+
+  #
+  # packages have moved around in the Spack repo -- they were originally
+  # in the same place as the code.parts.  We list the historical
+  # locations for each part here.
+  #
+  parts:
+    packages:
+      - ^var/spack/repos/builtin/packages/.*\.py$
+      - ^var/spack/packages/.*\.py$
+      - ^lib/spack/spack/packages/.*\.py$
+
+    # Core includes code from a number of locations
+    core:
+      - ^bin/spack$
+      - ^lib/spack/spack/(?!:external).*\.py$
+      - ^lib/spack/llnl/.*\.py$
+      - ^lib/spack/env/cc$
+
+    # Documentation
+    docs:
+      - ^lib/spack/docs/(?!:spack\.)[^/]*\.rst$
