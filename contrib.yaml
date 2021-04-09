@@ -29,3 +29,8 @@ contrib:
     # Documentation
     docs:
       - ^lib/spack/docs/(?!:spack\.)[^/]*\.rst$
+
+  # Users to merge into one
+  merge:
+    - ["Greg Becker", "Gregory Becker", "becker33"]
+    - ["Peter Scheibel", "Peter Josef Scheibel"]
